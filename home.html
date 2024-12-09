@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timenest</title>
+  <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+
+<!-- To-Do List Section -->
+<div id="todo-container" class="hidden">
+  <div class="todo-header">
+    <h2>To-Do List</h2>
+    <button id="minimize-btn">−</button>
+  </div>
+  <ul id="todo-list"></ul>
+  <div class="todo-input">
+    <input type="text" id="todo-input" placeholder="Add a new task..." />
+    <button id="add-task-btn">Add</button>
+  </div>
+</div>
+
+  <!-- Live Wallpaper -->
+  <div class="zelda">
+    <video autoplay loop muted playsinline class="back-video">
+      <source src="image/zelda.mp4" type="video/mp4">
+    </video>
+    <!-- Clock Container -->
+    <div class="container">
+      <!-- Clock Section -->
+      <div class="clock-wrapper">
+        <h1>CLOCK</h1>
+        <div id="time">00:00:00</div>
+        <p id="date">Monday | 4 Dec' 2024</p>
+      </div>
+
+      <!-- Floating Buttons -->
+      <div class="floating-buttons">
+        <a href="theme.html" class="button">Theme</a>
+        <a href="#" class="button">Music</a>
+        <a href="pomodoro.html" class="button">Pomodoro</a>
+        <a href="#" class="button">To-Do</a>
+      </div>
+    </div>
+  </div>
+
+   <!-- Include the script to load the background and handle tasks -->
+  <script src="homescript.js"></script>
+  <script src="themescript.js"></script>
+</body>
+</html>
+

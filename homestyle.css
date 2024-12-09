@@ -1,0 +1,231 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Live Wallpaper */
+.zelda {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensures the video stays in the background */
+}
+
+/* Container */
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+  z-index: 1; /* Places the content above the video */
+}
+
+/* Clock Wrapper */
+.clock-wrapper h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#time {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+#date {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+  gap: 10px; /* Adds space between buttons */
+}
+
+.button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  text-align: center;
+  flex: 1; /* Distributes space equally on smaller screens */
+  max-width: 120px; /* Limits button width */
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 90%; /* Reduce container width on smaller screens */
+  }
+
+  .clock-wrapper h1 {
+    font-size: 1.8rem; /* Slightly smaller font size for clock title */
+  }
+
+  #time {
+    font-size: 2.5rem; /* Adjust time font size */
+  }
+
+  #date {
+    font-size: 0.9rem; /* Adjust date font size */
+  }
+
+  .button {
+    font-size: 0.9rem; /* Adjust button text size */
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .clock-wrapper h1 {
+    font-size: 1.5rem; /* Further reduction for very small screens */
+  }
+
+  #time {
+    font-size: 2rem; /* Time adjusts for tiny screens */
+  }
+
+  #date {
+    font-size: 0.8rem;
+  }
+
+  .button {
+    padding: 6px 8px; /* Smaller padding for buttons */
+    font-size: 0.8rem;
+  }
+}
+
+/* To-Do List */
+#todo-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#todo-container.hidden {
+  display: none;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+
+.todo-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+#minimize-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+#todo-list li button {
+  background: rgba(255, 0, 0, 0.8);
+  border: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.todo-input {
+  display: flex;
+  gap: 10px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+#add-task-btn {
+  background: rgba(0, 128, 0, 0.8);
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#add-task-btn:hover {
+  background: rgba(0, 128, 0, 1);
+}

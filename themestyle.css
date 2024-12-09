@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: black;
+  color: white;
+  overflow-y: auto; /* Only allow vertical scrolling on the body */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  background: rgba(50, 50, 50, 0.8);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a:hover {
+  background: rgba(70, 70, 70, 0.9);
+  transform: translateY(-2px);
+}
+
+.navbar a:active {
+  background: rgba(50, 50, 50, 1);
+  transform: translateY(0);
+}
+
+/* Themes Section Styles */
+h1 {
+  margin: 80px 0 20px; /* Adjusted for fixed navbar */
+  font-size: 2rem;
+}
+
+.theme-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Theme Box Styles */
+.theme-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.theme-box video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.theme-box button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.theme-box button:hover {
+  background-color: rgba(70, 70, 70, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 5px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 100px 0 20px;
+  }
+
+  .theme-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .theme-box button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .theme-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .theme-box button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

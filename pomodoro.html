@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timenest</title>
+  <link rel="stylesheet" href="pomodorostyles.css">
+</head>
+<body>
+  <!-- Live Wallpaper -->
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="image/" type="video/mp4">
+  </video>
+
+  <div class="container">
+    <div class="menu">
+      <button onclick="location.href='theme.html'">Theme</button>
+      <button onclick="location.href='#music'">Music</button>
+      <button onclick="location.href='home.html'">Home</button>
+      <button onclick="location.href='#todo'">To-Do</button>
+    </div>
+
+    <div class="timer" id="pomodoro">
+      <h1>POMODORO</h1>
+      <div class="time-display" id="time">25:00</div>
+      <div class="control-buttons">
+        <button class="start-btn" onclick="startTimer()">▶ Start</button>
+        <button class="stop-btn" onclick="stopTimer()">⏸ Stop</button>
+        <button class="reset-btn" onclick="resetTimer()">🔄 Reset</button>
+      </div>
+    </div>
+  </div>
+
+ <!-- Include the script to load background -->
+  <script src="pomodoroscript.js"></script>
+  <script src="themescript.js"></script> 
+</body>
+</html>
